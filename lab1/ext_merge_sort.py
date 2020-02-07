@@ -49,7 +49,6 @@ def sort_ten_files():
                 for s in array:
                     g.write(str(s)+"\n")
 
-    print("finish sorting 10 files")
 
 # merge into a big file section
 array_of_opened_file = []
@@ -72,7 +71,7 @@ def sync_merge():
             nextint = array_of_opened_file[i-1].readline()
             tdarr[i-1][index] = int(nextint.strip())
 
-    for thousand_time in range(1000):
+    for _ in range(1000):
 
         temp_local_min = find_local_min(tdarr)
         if temp_local_min is None:
